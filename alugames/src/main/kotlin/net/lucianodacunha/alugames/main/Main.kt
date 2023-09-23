@@ -23,7 +23,7 @@ fun getListaDeJogos() : List<Jogo> {
         print("$codigo")
 
         var resultadoDaBusca = runCatching {
-            ConsumerAPI.findGame(codigo) as Jogo
+            ConsumerAPI.findGame(codigo)
         }
 
         resultadoDaBusca.onFailure {
